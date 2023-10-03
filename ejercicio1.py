@@ -9,5 +9,5 @@ def pasar_lista():
     for i in range(len(l)-1):
         if l[i]!=l[i+1]:
             asistentes+=1
-    asistentes+=1#tenemos que sumar siempre uno del primer elemento
+    asistentes+=1#tenemos que sumar siempre uno del ultimo  elemento
     return asistentes
