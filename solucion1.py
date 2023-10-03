@@ -3,7 +3,7 @@
 asistencia=int(input("Asistentes en la sala:"))
 l=list(map(int,input().split()))
 
-def pasar_lista():
+def pasar_lista(l):
     asistentes=0
     l.sort()
     for i in range(len(l)-1):
