@@ -1,13 +1,9 @@
-#queremos encontrar todos los números distintos que hay en una lista  sin emplear sets, listas , etc
+asistentes = 182909303
+asistentes_str=str(asistentes )
+asistentes_distintos=0
+for i in range(len(asistentes_str)-1):
+    if(asistentes_str[i])!=(asistentes_str[i+1]):
+        asistentes_distintos+=1
 
-asistencia=int(input("Asistentes en la sala:"))
-l=list(map(int,input().split()))
-
-def pasar_lista(l):
-    asistentes=0
-    l.sort()
-    for i in range(len(l)-1):
-        if l[i]!=l[i+1]:
-            asistentes+=1
-    asistentes+=1#tenemos que sumar siempre uno del ultimo  elemento
-    return asistentes
+asistentes_distintos+=1
+print(asistentes_distintos)
