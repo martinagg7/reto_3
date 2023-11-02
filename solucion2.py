@@ -1,20 +1,25 @@
-lista_pesos=list(map(int,input().split()))
-peso_max=int(input("Ingrese el peso máximo por gondola:"))
-gondolas=0
-m=len(lista_pesos)-1
+ 
+def gondola(niños,peso_max):
+    niños.sort()
+    l=len(niños)
+    inicio=0
+    final=l-1
+    gondolas=0
 
-def gondolas(lista_pesos,peso_max):
-    lista_pesos.sort(reverse=True)
 
-    for i in range(len(lista_pesos)):
-        if i!=m:
-            peso=lista_pesos[i]+lista_pesos[m]
-        if i==m:
-            peso=lista_pesos[i]
-        if peso>peso_max:
+    while inicio<=final:
+
+        if inicio==final:
             gondolas+=1
-        if peso<=peso_max:
-            m-=1
+            final-=1
+
+        if niños[inicio]+niños[final]<=peso_max:
+            inicio+=1
+            final-=1
+            gondolas+=1
+
+        else:
+            final-=1
             gondolas+=1
 
 
